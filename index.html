@@ -423,7 +423,7 @@ function unmount(node){ if(node&&node.parentNode) node.parentNode.removeChild(no
 function emailBody(list,prog){
   let b=`Cordial saludo,\n\nAdjunto los avales de práctica académica correspondientes a los siguientes estudiantes de ${prog}:\n\n`;
   list.forEach((c,i)=>{ b+=`${i+1}. ${c.alumno} (c.c. ${c.ced}) — ${c.empresa}\n`; });
-  b+=`\nLos documentos van en PDF adjunto (descárgalos con "PDF combinado" y adjúntalos a este correo).\n\nAtentamente,\nJosé Fernando Guarín M.\nCoordinador General de Prácticas — FCA, Universidad de Antioquia`;
+  b+=`\nLos documentos van en PDF adjunto.\n\nAtentamente,\nJosé Fernando Guarín M.\nCoordinador General de Prácticas — FCA, Universidad de Antioquia`;
   return b;
 }
 function subjectFor(prog){ return `Avales de práctica académica — ${prog} — ${hoyLargo()}`; }
