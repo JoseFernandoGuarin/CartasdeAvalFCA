@@ -208,7 +208,6 @@ const RECIPIENTS = {
 };
 const ROUTE_ORDER = ["medvet","zootecnia","tgia"];
 
-const ASSIST_CARD = "La práctica se realizará entre el 15 de octubre y el 4 de marzo de 2025, estas fechas pueden variar \u00B1 dos semanas y son solicitadas para asuntos del Assist Card que la estudiante debe tramitar.";
 
 const TGIA_LINE = "Para mayor información relacionada con su programa puede contactar al correo electrónico: tgia.fca@udea.edu.co.";
 
@@ -298,7 +297,7 @@ function classify(rec){
     subject=`Asunto: Aval para ${inioreini} de su ${tipoPA} en ${donde} ${empresa}.`;
     subjectHTML=esc(subject);
   }else if(cat==="pasantia"){
-    subject=`Asunto: Aval para ${inioreini} su pasantía con ${donde} ${empresa}, Uruguay.`;
+    subject=`Asunto: Aval para ${inioreini} su pasantía con ${donde} ${empresa}.`;
     subjectHTML=esc(subject);
   }else{
     w.push(`Tipo de práctica no reconocido ("${tipo}") — la carta quedará sin línea de Asunto.`);
@@ -308,7 +307,7 @@ function classify(rec){
   const tp=(tipoPA||"").trim().toLowerCase();
   let complemento="";
   if(tp==="rotación"||tp==="rotacion") complemento=`La ${tipoPA} se espera que inicie en la fecha aproximada ${fecha}.`;
-  else if(tp.includes("pasant")) complemento=ASSIST_CARD;
+  else if(tp.includes("pasant")) complemento=`La pasantía se espera que inicie en la fecha aproximada ${fecha}.`;
   // else: none (e.g. Práctica profesional)
 
   // ---- TGIA contact line ----
