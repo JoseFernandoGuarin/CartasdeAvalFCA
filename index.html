@@ -294,7 +294,7 @@ function classify(rec){
     subject=`Asunto: Aval para ${inioreini} de prácticas presenciales, formalizadas a través de ${tipo} con ${donde} ${empresa}.`;
     subjectHTML=`Asunto: Aval para ${inioreini} de prácticas presenciales, formalizadas a través de <b>${esc(tipo)}</b> con ${esc(donde)} ${esc(empresa)}.`;
   }else if(cat==="interno"){
-    subject=`Asunto: Aval para ${inioreini} de su ${tipoPA} en ${donde} ${empresa}.`;
+    subject=`Asunto: Aval para ${inioreini} de prácticas presenciales como ${tipoPA} en ${donde} ${empresa}.`;
     subjectHTML=esc(subject);
   }else if(cat==="pasantia"){
     subject=`Asunto: Aval para ${inioreini} su pasantía con ${donde} ${empresa}.`;
